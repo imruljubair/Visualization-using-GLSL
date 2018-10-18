@@ -84,7 +84,7 @@ int main()
 	// loading vertices
 	std::vector<float> g_vertex_buffer_data;
 
-	string filename = "vrt.txt";
+	string filename = "./vert_data/vrt.txt";
 	ifstream inFile;
 	float temp;
 	int count = 0;
@@ -100,7 +100,7 @@ int main()
 	// loading data
 	std::vector<float> g_color_buffer_data;
 
-	string filenameData = "dt.txt";
+	string filenameData = "./vert_data/dt.txt";
 	ifstream inFileData;
 	inFileData.open(filenameData);
 	while(!inFileData.eof())
