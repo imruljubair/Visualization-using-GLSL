@@ -1,0 +1,8 @@
+#! /bin/bash
+
+clear
+g++ -std=c++11 -c main.cpp
+g++ -std=c++11 -c shader.cpp
+g++ -std=c++11 -o a.out main.o shader.o -lGLEW -lGL -lGLU -lglfw
+
+./a.out
