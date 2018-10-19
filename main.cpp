@@ -81,8 +81,8 @@ int main()
 	glBindVertexArray(VertexArrayID);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint programID = LoadShaders( "./shaders/TransformVertexShader.vertexshader", "./shaders/ColorFragmentShader.fragmentshader" );
-	GLuint programIDedge = LoadShaders( "./shaders/TransformVertexShader.vertexshader", "./shaders/edgeColorFragmentShader.fragmentshader" );
+	GLuint programID = LoadShaders( "./shaders/VertexShader.vertexshader", "./shaders/FragmentShader.fragmentshader" );
+	GLuint programIDedge = LoadShaders( "./shaders/VertexShader.vertexshader", "./shaders/edge.fragmentshader" );
 
 
 	// loading vertices
@@ -129,11 +129,11 @@ int main()
 
 				glm::mat4 Projection = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f);
 
-				glm::mat4 View      = glm::lookAt(
-															glm::vec3(0,0,-35), // Camera is at (4,3,-3), in World Space
-															glm::vec3(0,0,0), // and looks at the origin
-															glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
-						   								);
+				glm::mat4 View  = glm::lookAt(
+													glm::vec3(0,0,-35), // Camera is at (4,3,-3), in World Space
+													glm::vec3(0,0,0), // and looks at the origin
+													glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
+						   						);
 
 				glm::mat4 Model = glm::mat4(1.0f);
 				scaling = scale (mat4(1.0f), vec3 (scalar)) * scaling;
