@@ -1,3 +1,5 @@
+// Mohammad Imrul Jubair
+// cite: http://www.opengl-tutorial.org/
 // Include standard headers
 #include <iostream>
 #include <stdio.h>
@@ -69,7 +71,7 @@ int main()
 	glfwSetMouseButtonCallback(window, mouseCallback);
 
 	// Dark blue background
-	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+	glClearColor(0.8f, 0.8f, 0.95f, 0.0f);
 
 	// Enable depth test
 	glEnable(GL_DEPTH_TEST);
