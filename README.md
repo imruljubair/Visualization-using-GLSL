@@ -3,10 +3,11 @@
 This is a part of my CPSC 691 Rendering course project. In this project, I visualized the triangle meshe from ICON (Icosahedral Nonhydrostatic) dataset using GLSL. In order to visualize, I used my favourite Parula colormap (Credit: https://github.com/kbinani/colormap-shaders). I followed multipassing method to render triangle meshe with the edges.
 
 ![Alt text](https://github.com/imruljubair/Visualization-using-GLSL/blob/master/glsl.png)
+![Alt text](https://github.com/imruljubair/Visualization-using-GLSL/blob/master/glsl2.png)
 
-How to run:
+How to:
 
-	There is bash file called 'mybash'. Run it.
+	There is bash file called 'mybash'. Execute it.
 
 Keys:
 

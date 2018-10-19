@@ -25,7 +25,11 @@ static void mouseCallback(GLFWwindow* window, int button, int action, int mods);
 
 glm::mat4 rotation = mat4(1.0f);
 glm::mat4 scaling = mat4(1.0f);
+
+
 float scalar = 1.0f;
+string filenameVert = "./vert_data/vrt.txt"; // vertices
+string filenameData = "./vert_data/dt.txt"; // data
 
 int main()
 {
@@ -77,18 +81,17 @@ int main()
 	glBindVertexArray(VertexArrayID);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint programID = LoadShaders( "TransformVertexShader.vertexshader", "ColorFragmentShader.fragmentshader" );
-	GLuint programIDedge = LoadShaders( "TransformVertexShader.vertexshader", "edgeColorFragmentShader.fragmentshader" );
+	GLuint programID = LoadShaders( "./shaders/TransformVertexShader.vertexshader", "./shaders/ColorFragmentShader.fragmentshader" );
+	GLuint programIDedge = LoadShaders( "./shaders/TransformVertexShader.vertexshader", "./shaders/edgeColorFragmentShader.fragmentshader" );
 
 
 	// loading vertices
 	std::vector<float> g_vertex_buffer_data;
 
-	string filename = "./vert_data/vrt.txt";
 	ifstream inFile;
 	float temp;
 	int count = 0;
-	inFile.open(filename);
+	inFile.open(filenameVert);
 	while(!inFile.eof())
 	{
 			inFile >> temp;
@@ -100,7 +103,6 @@ int main()
 	// loading data
 	std::vector<float> g_color_buffer_data;
 
-	string filenameData = "./vert_data/dt.txt";
 	ifstream inFileData;
 	inFileData.open(filenameData);
 	while(!inFileData.eof())
